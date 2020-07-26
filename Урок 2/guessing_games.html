@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+
+<script>
+	var answer = parseInt(Math.random() * 100);
+    var userAnswer = prompt("Введите ваше число: ");
+    var maxTryCounts = 2;
+	
+for (var tryCounts = 1; tryCounts < maxTryCounts; tryCounts++) {
+		
+	
+	if( userAnswer == answer ) {
+		document.write( "Поздравляю! Вы угадали число! " );
+		break;
+	} else if (userAnswer > answer) {
+		alert("Введите число меньше!");
+	} else if (userAnswer < answer) {
+		alert("Введите число больше!");
+	}
+	
+	userAnswer = prompt( "Попробуйте ещё раз. у вас осталось " + ( maxTryCounts - tryCounts + " попыток." ));
+}
+if (tryCounts == maxTryCounts) {
+	alert("Вы проиграли!");
+}
+document.write( "Правильный ответ: " + answer );
+</script>

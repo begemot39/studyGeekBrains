@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+
+<script>
+
+    alert("Вас приветствует программа поиска минимального значения в массиве");
+    var userArrayLength = prompt( "Введите, пожалуйста, размер массива: " );
+    var arrayForSearch = [];
+    function getArrayWithRandomNumbrs( arrayLength, array ) {
+        for ( var i = 0; i < arrayLength; i++ ) {
+            var randomNumberToRarray = Math.round( Math.random() * 100 );
+            array.push(randomNumberToRarray);
+        }
+        return array;
+    }
+
+    function getMinOfArray(numArray) {
+        return Math.min.apply(null, numArray);
+    }
+
+    getArrayWithRandomNumbrs( userArrayLength, arrayForSearch );
+    alert( "Я сгенерировала массив с такими элементами: " + arrayForSearch + ". Cейчас найду среди них максимальное значение." );
+    alert( "Максимальное значение в массиве: " + getMinOfArray(arrayForSearch) + "\nДо свидания!" );
+
+</script>

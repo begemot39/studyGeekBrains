@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+<script>
+
+    alert("Вас приветствует программа поиска максимального значения в массиве");
+    var userArrayLength = prompt( "Введите, пожалуйста, размер массива: " );
+    var arrayForSearch = [];
+    function getArrayWithRandomNumbrs( arrayLength, array ) {
+        for ( var i = 0; i < arrayLength; i++ ) {
+            var randomNumberToRarray = Math.round( Math.random() * 100 );
+            array.push(randomNumberToRarray);
+        }
+        return array;
+    }
+
+    function getMaxOfArray(numArray) {
+        return Math.max.apply(null, numArray);
+    }
+
+    getArrayWithRandomNumbrs( userArrayLength, arrayForSearch );
+    alert( "Я сгенерировала массив с такими элементами: " + arrayForSearch + ". Cейчас найду среди них максимальное значение." );
+    alert( "Максимальное значение в массиве: " + getMaxOfArray(arrayForSearch)  + "\nДо свидания!" );
+    
+
+</script>
